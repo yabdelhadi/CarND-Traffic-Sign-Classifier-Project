@@ -32,7 +32,7 @@ The goals / steps of this project are the following:
 
 #### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
 
-You're reading it! and here is a link to my [project code](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
+You're reading it! and here is a link to my [project code](https://github.com/yabdelhadi/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
 
 ### Data Set Summary & Exploration
 
@@ -52,6 +52,7 @@ signs data set:
 Here is an exploratory visualization of the data set. 
 
 ![alt text][image1]
+![alt text][image2]
 
 I randomly selected an image for every unique class ID and use this image to display an example of every class as shown below. 
 
