@@ -125,8 +125,7 @@ I then revisited the network architecture to see what modification I can do to i
 
 Here are five German traffic signs that I found on the web:
 
-![alt text][image4] ![alt text][image5] ![alt text][image6] 
-![alt text][image7] ![alt text][image8]
+![alt text][image4]
 
 I picked those images specifically because I was trying to pick some images which are very well represented in the training data and others which are underrepresented to experience  ow well my model will predict those signs
 
