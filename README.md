@@ -52,7 +52,6 @@ signs data set:
 Here is an exploratory visualization of the data set. 
 
 ![alt text][image1]
-![alt text][image2]
 
 I randomly selected an image for every unique class ID and use this image to display an example of every class as shown below. 
 
