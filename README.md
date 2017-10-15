@@ -15,7 +15,7 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./Writeup-supported-pictures/traffic_signs_examples_of_each_classn.png "Images-Visualization"
+[image1]: ./Writeup-supported-pictures/traffic_signs_examples_of_each_class.png "Images-Visualization"
 [image2]: ./Writeup-supported-pictures/dataset_visualization.png "Bar-Graph-Visualization"
 [image3]: ./Writeup-supported-pictures/graysclae.png "Grayscaling"
 [image4]: ./Writeup-supported-pictures/Accuracy.png "Model Accuracy"
@@ -63,9 +63,9 @@ The bar graph shows the training dataset distribution of each unique class. Each
 
 As a first step, I decided to convert the images to grayscale since it is a lot faster to process a 1 channel image compare to a 3 channel image especially with the amount of images the model has to process to be trained. 
 
-Then I normalized the image data because I want all my data to have zero mean and equal variance to get a well conditioned problem which help the optimizer get the solution and train a lot faster. normalizing the data also helps the weights and biases to initialize at a good values
+Then I normalized the image data because I want all my data to have zero mean and equal variance to get a well conditioned problem which help the optimizer get the solution and train a lot faster. Normalizing the data also helps the weights and biases to initialize at a good values
 
-Here is an example of a traffic sign image before and after grayscaling.
+Here is an example of a traffic sign image after grayscaling.
 
 ![alt text][image3]
 
