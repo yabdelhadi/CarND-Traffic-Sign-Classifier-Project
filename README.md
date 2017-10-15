@@ -15,10 +15,10 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./Writeup-supported-pictures/dataset-visualization.jpg "Visualization"
+[image1]: ./Writeup-supported-pictures/dataset_visualization.jpg "Visualization"
 [image2]: ./Writeup-supported-pictures/graysclae.png "Grayscaling"
 [image3]: ./examples/random_noise.jpg "Random Noise"
-[image4]: ./Web-Traffic/1.jpg "Traffic Sign 1"
+[image4]: ./Writeup-supported-pictures/web_signs.png "signs"
 [image5]: ./Web-Traffic/2.jpg "Traffic Sign 2"
 [image6]: ./Web-Traffic/3.jpg "Traffic Sign 3"
 [image7]: ./Web-Traffic/4.jpg "Traffic Sign 4"
