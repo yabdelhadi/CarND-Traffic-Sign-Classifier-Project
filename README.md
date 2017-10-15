@@ -15,11 +15,12 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./Writeup-supported-pictures/dataset_visualization.png "Visualization"
-[image2]: ./Writeup-supported-pictures/graysclae.png "Grayscaling"
-[image3]: ./Writeup-supported-pictures/Accuracy.png "Model Accuracy"
-[image4]: ./Writeup-supported-pictures/Loss.png "Model Loss"
-[image5]: ./Writeup-supported-pictures/web_signs.png "Traffic-Signs"
+[image1]: ./Writeup-supported-pictures/traffic_signs_examples_of_each_classn.png "Images-Visualization"
+[image2]: ./Writeup-supported-pictures/dataset_visualization.png "Bar-Graph-Visualization"
+[image3]: ./Writeup-supported-pictures/graysclae.png "Grayscaling"
+[image4]: ./Writeup-supported-pictures/Accuracy.png "Model Accuracy"
+[image5]: ./Writeup-supported-pictures/Loss.png "Model Loss"
+[image6]: ./Writeup-supported-pictures/web_signs.png "Traffic-Signs"
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
@@ -48,9 +49,11 @@ signs data set:
 
 Here is an exploratory visualization of the data set. 
 
-![alt text][image1]
+![alt text][image2]
 
-I randomly selected an image for every unique class ID and use this image to display an example of every class as shown below. 
+I randomly selected an image for every unique class ID and used this image to display an example of every class as shown below.
+
+![alt text][image1]
 
 The bar graph shows the training dataset distribution of each unique class. Each bar represents one class ID and how many samples are in the training dataset for each class ID. This graph is very helpful when training a network since it shows which class is underrepresented and could potentially need more data.
 
@@ -64,7 +67,7 @@ Then I normalized the image data because I want all my data to have zero mean an
 
 Here is an example of a traffic sign image before and after grayscaling.
 
-![alt text][image2]
+![alt text][image3]
 
 
 #### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
@@ -117,7 +120,7 @@ I then revisited the network architecture to see what modification I can do to i
 
 The graphs below show the model accuracy and loss as I was training my model
 
-![alt text][image3] ![alt text][image4]
+![alt text][image4] ![alt text][image5]
 
 
 ### Test a Model on New Images
@@ -126,7 +129,7 @@ The graphs below show the model accuracy and loss as I was training my model
 
 Here are five German traffic signs that I found on the web:
 
-![alt text][image5]
+![alt text][image6]
 
 I picked those images specifically because I was trying to pick some images which are very well represented in the training data and others which are underrepresented to experience  ow well my model will predict those signs
 
