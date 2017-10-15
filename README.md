@@ -103,7 +103,7 @@ My final model consisted of the following layers:
 
 To train the model, I used a batch size of 128 and 30 epochs. I tried to use a smaller batch size but it didn't seem to improve the validation accuracy so I decided to keep it at 128. It also seems like the validation accuracy started to saturate at around 22 epochs but I decide to go with 30 epoches since it gave me a 1.5% of a better accuracy.
 
-I also used the Adam optimizer because it uses the moving average of the parameters (momentum) which enables the optimizer to use a larger step size allowing the optimizer to coverage faster without fine tuning of the step size. This is a great advantage over the traditional  gradient decent. However, the main downside of the Adam optimizer that it requires more computational power. I decided to choose a learning rate of 0.001 without any fine tuning and let the Adam optimizer to converge
+I also used the Adam optimizer because it uses the moving average of the parameters (momentum) which enables the optimizer to use a larger step size allowing the optimizer to converge faster without fine tuning of the step size. This is a great advantage over the traditional  gradient decent. However, the main downside of the Adam optimizer that it requires more computational power. I decided to choose a learning rate of 0.001 without any fine tuning and let the Adam optimizer to converge.
 
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
@@ -112,11 +112,11 @@ My final model results were:
 * validation set accuracy of 96.5% 
 * test set accuracy of 94.3%
 
-I started with the LeNet-5 architecture which we learned in the LeNet Lab. I thought this would be a good architecture to start with as a baseline. I used a 2 convolution, 2 max pooling, and 3 fully connected. I modified the input to 32x32x3 and the output to 43 (number of classes). Training this architecture gave me a validation accuracy of 89%. I converted all training, validation, and test data to grayscale and normalized all the data. By pre-processing the images first, I was about to pump my validation accuracy from 89% to 91%
+I started with the LeNet-5 architecture which we learned in the LeNet Lab. I thought this would be a good architecture to start with as a baseline. I used a 2 convolution, 2 max pooling, and 3 fully connected. I modified the input to match the image size and the output t0 match the number of classes. Training this architecture gave me a validation accuracy of 89%. I converted all training, validation, and test data to grayscale and normalized all the data. By pre-processing the images first, I was about to bump my validation accuracy from 89% to 91%
 
-I then tried to tune the hyperparameters. Tuning the batch size and learning rate didn't seem to help my network get a better accuracy or I decide to leave them at 128 for batch size and 0.001 for learning rate. Increasing the number of the Epochs seemed to improve the network prediction accuracy. I started with 50 epochs but then realized  that the accuracy started to saturate at around 22 epochs so I decided to use 30 epoches. Tuning those hyperparameters allowed me to increase my validation accuracy to 92.5%
+I then tried to tune the hyperparameters. Tuning the batch size and learning rate didn't seem to help my network get a better accuracy so I decide to leave them at 128 for batch size and 0.001 for learning rate. Increasing the number of the Epochs seemed to improve the network prediction accuracy. I started with 50 epochs but then realized  that the accuracy started to saturate at around 22 epochs so I decided to use 30 epoches. Tuning those hyperparameters allowed me to increase my validation accuracy to 92.5%
 
-I then revisited the network architecture to see what modification I can do to improve my accuracy. I decided to add a dropout to my network since my network was overfitting which means the model won't generalize well to a new data points. I added two dropouts, after the third and fourth layer. In the beginning it seemed seem to improve my accuracy but later I was able to tune the keep probability to 0.45 which then improve my network accuracy to 96.5% 
+I then revisited the network architecture to see what modification I can do to improve my accuracy. I decided to add a dropout to my network since my network was overfitting which means the model won't generalize well to a new data points. I added two dropouts, after the third and fourth layer. In the beginning it didn't seem to improve my accuracy but later I was able to tune the keep probability to 0.45 which then improve my network accuracy to 96.5% 
 
 The graphs below show the model accuracy and loss as I was training my model
 
@@ -127,11 +127,11 @@ The graphs below show the model accuracy and loss as I was training my model
 
 #### 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
-Here are five German traffic signs that I found on the web:
+Here are the five German traffic signs that I found on the web:
 
 ![alt text][image6]
 
-I picked those images specifically because I was trying to pick some images which are very well represented in the training data and others which are underrepresented to experience  ow well my model will predict those signs
+I picked those images specifically because I was trying to pick some images which are very well represented in the training data and others which are underrepresented to experience how well my model will predict those signs.
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
@@ -141,12 +141,12 @@ Here are the results of the prediction:
 |:---------------------:|:---------------------------------------------:| 
 | Stop Sign      		| Stop sign   									| 
 | No entry     			| No entry 										|
-| Roundabout mandatory	| Roundabout mandatory							|
+| Roundabout mandatory	| Priority road							|
 | Yield					| Yield     									|
 | 100 km/h	      		| 100 km/h  					 				|
 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. Class ID 40 which is Roundabout mandatory sign wasn't classified correctly due to the fact that this class ID is underrepresented compared to the rest of the classes. One was to go around this to improve the model detection is by either collect more training data or argument the data to get more example of the underpresented classes.
+The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. Class ID 40 which is Roundabout mandatory sign wasn't classified correctly due to the fact that this class ID is underrepresented compared to the rest of the classes. One was to go around this to improve the model detection is by either collecting more training data or argument the data to get more example of the underpresented classes.
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
