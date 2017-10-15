@@ -15,7 +15,7 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./Writeup-supported-pictures/dataset_visualization.jpg "Visualization"
+[image1]: ./Writeup-supported-pictures/dataset_visualization.png "Visualization"
 [image2]: ./Writeup-supported-pictures/graysclae.png "Grayscaling"
 [image3]: ./examples/random_noise.jpg "Random Noise"
 [image4]: ./Writeup-supported-pictures/web_signs.png "signs"
