@@ -17,12 +17,9 @@ The goals / steps of this project are the following:
 
 [image1]: ./Writeup-supported-pictures/dataset_visualization.png "Visualization"
 [image2]: ./Writeup-supported-pictures/graysclae.png "Grayscaling"
-[image3]: ./examples/random_noise.jpg "Random Noise"
-[image4]: ./Writeup-supported-pictures/web_signs.png "signs"
-[image5]: ./Web-Traffic/2.jpg "Traffic Sign 2"
-[image6]: ./Web-Traffic/3.jpg "Traffic Sign 3"
-[image7]: ./Web-Traffic/4.jpg "Traffic Sign 4"
-[image8]: ./Web-Traffic/5.jpg "Traffic Sign 5"
+[image3]: ./Writeup-supported-pictures/Accuracy.png "Model Accuracy"
+[image4]: ./Writeup-supported-pictures/Loss.png "Model Loss"
+[image5]: ./Writeup-supported-pictures/web_signs.png "Traffic-Signs"
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
@@ -118,13 +115,18 @@ I then tried to tune the hyperparameters. Tuning the batch size and learning rat
 
 I then revisited the network architecture to see what modification I can do to improve my accuracy. I decided to add a dropout to my network since my network was overfitting which means the model won't generalize well to a new data points. I added two dropouts, after the third and fourth layer. In the beginning it seemed seem to improve my accuracy but later I was able to tune the keep probability to 0.45 which then improve my network accuracy to 96.5% 
 
+The graphs below show the model accuracy and loss as I was training my model
+
+![alt text][image3] ![alt text][image4]
+
+
 ### Test a Model on New Images
 
 #### 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
 Here are five German traffic signs that I found on the web:
 
-![alt text][image4]
+![alt text][image5]
 
 I picked those images specifically because I was trying to pick some images which are very well represented in the training data and others which are underrepresented to experience  ow well my model will predict those signs
 
